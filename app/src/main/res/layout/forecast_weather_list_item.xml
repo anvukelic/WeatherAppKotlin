@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <ImageView
+        android:id="@+id/forecastImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/forecastDetailsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/forecastTime"
+        app:layout_constraintBottom_toBottomOf="@id/forecastImage"
+        app:layout_constraintLeft_toRightOf="@id/forecastImage"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/forecastTemperature"
+            style="@style/FutureWeatherItemDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/forecastDescription"
+            style="@style/FutureWeatherItemDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/forecastTemperature"
+            app:layout_constraintRight_toLeftOf="@id/forecastHumidity" />
+
+        <TextView
+            android:id="@+id/forecastHumidity"
+            style="@style/FutureWeatherItemDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/forecastDescription"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/forecastTime"
+        style="@style/FutureWeatherItemDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@id/forecastDetailsContainer"
+        app:layout_constraintLeft_toRightOf="@id/forecastImage"
+        app:layout_constraintTop_toTopOf="@id/forecastImage" />
+</android.support.constraint.ConstraintLayout>

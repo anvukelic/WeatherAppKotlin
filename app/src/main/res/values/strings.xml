@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WeatherAppKotlin</string>
+    <string name="weather_time">%1$s</string>
+    <string name="weather_temperature">%1$s°</string>
+    <string name="weather_wind_speed">Wind %1$.1f km/h</string>
+    <string name="weather_pressure">%1$.2f hpa</string>
+    <string name="weather_humidity">%1$s humidity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
